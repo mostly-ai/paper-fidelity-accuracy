@@ -14,10 +14,10 @@ for dataset in datasets:
     print('CopulaGAN ' + dataset)
     np.random.seed(0)
     torch.manual_seed(0)
-    data = pd.read_csv('~/data/paper05/data/' + dataset + '_trn.csv')
+    data = pd.read_csv('../data_new/' + dataset + '_trn.csv.gz')
     if dataset == 'credit-default':
         data = data.astype({'SEX': 'object', 'EDUCATION': 'object', 'MARRIAGE': 'object'})
     model = CopulaGAN(verbose=True)
     model.fit(data)
     samples = model.sample(50000)
-    samples.to_csv('~/data/paper05/data/' + dataset + '_copulagan.csv', index=False)
+    samples.to_csv('../data_new/' + dataset + '_copulagan.csv', index=False)
