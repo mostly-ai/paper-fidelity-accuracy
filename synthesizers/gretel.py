@@ -19,7 +19,7 @@ from gretel_synthetics.batch import DataFrameBatch
 datasets = ['adult', 'credit-default', 'marketing', 'online-shoppers']
 for dataset in datasets:
     print('GRETEL ' + dataset)
-    data = pd.read_csv('~/data/paper05/data/' + dataset + '_trn.csv')
+    data = pd.read_csv('../data_new/' + dataset + '_trn.csv.gz')
     model_dir = str(Path.cwd() / "models" / "gretel" / dataset)
     if not os.path.exists(model_dir):
         os.makedirs(model_dir)
@@ -33,4 +33,4 @@ for dataset in datasets:
     batcher.train_all_batches()
     batcher.generate_all_batch_lines(num_lines=50000, max_invalid=50000, parallelism=0)
     samples = batcher.batches_to_df()
-    samples.to_csv('~/data/paper05/data/' + dataset + '_gretel.csv', index=False)
+    samples.to_csv('../data_new/' + dataset + '_gretel.csv', index=False)
