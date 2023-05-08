@@ -16,7 +16,7 @@ flip <- function(dt, n = nrow(dt), prob = 0.1) {
 }
 
 set.seed(123)
-datasets <- c('adult', 'credit-default', 'marketing', 'online-shoppers')
+datasets <- c('adult', 'credit-default', 'bank-marketing', 'online-shoppers')
 nil <- lapply(datasets, function(dataset) {
   fn_trn <- file.path('data', paste0(dataset, '_trn.csv.gz'))
   dt_trn <- fread(fn_trn)
