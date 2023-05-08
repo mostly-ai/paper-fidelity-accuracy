@@ -16,7 +16,7 @@ import os
 import pandas as pd
 from gretel_synthetics.batch import DataFrameBatch
 
-datasets = ['adult', 'credit-default', 'marketing', 'online-shoppers']
+datasets = ['adult', 'credit-default', 'bank-marketing', 'online-shoppers']
 for dataset in datasets:
     print('GRETEL ' + dataset)
     data = pd.read_csv('../data_new/' + dataset + '_trn.csv.gz')
