@@ -10,7 +10,8 @@ import time
 from sdv.single_table import CTGANSynthesizer
 from sdv.metadata import SingleTableMetadata
 
-datasets = ['adult', 'bank-marketing', 'online-shoppers', 'credit-default']
+#datasets = ['adult', 'bank-marketing', 'online-shoppers', 'credit-default']
+datasets = ['online-shoppers', 'credit-default']
 
 start = time.time()
 
@@ -38,4 +39,4 @@ for dataset in datasets:
 
 end = time.time()
 elapsed = end - start
-print('The CTGAN synthetic data generation took ' + elapsed + 'seconds.')
+print('The CTGAN synthetic data generation took ' + str(elapsed) + 'seconds.')
