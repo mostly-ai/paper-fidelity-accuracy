@@ -18,7 +18,7 @@ for dataset in datasets:
     print('Gaussian Copula ' + dataset)
     np.random.seed(0)
     torch.manual_seed(0)
-    data = pd.read_csv('../data_new/' + dataset + '_trn.csv.gz')
+    data = pd.read_csv('../data/' + dataset + '_trn.csv.gz')
     # if dataset == 'credit-default':
     #     data = data.astype({'SEX': 'object', 'EDUCATION': 'object', 'MARRIAGE': 'object'})
     metadata = SingleTableMetadata()
