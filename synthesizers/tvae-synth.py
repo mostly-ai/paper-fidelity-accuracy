@@ -1,7 +1,6 @@
 
-# conda create -y -n sdv python==3.7.7
+# conda create -y -n sdv python==3.10.10 sdv==1.1.0 pandas==2.0.1
 # conda activate sdv
-# pip install sdv==0.7.0
 
 import pandas as pd
 import numpy as np
