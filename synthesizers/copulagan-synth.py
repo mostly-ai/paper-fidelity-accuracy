@@ -32,4 +32,4 @@ for dataset in datasets:
     model = CopulaGANSynthesizer(metadata)
     model.fit(data)
     samples = model.sample(50000)
-    samples.to_csv('../data_new/' + dataset + '_copulagan.csv', index=False)
+    samples.to_csv('../data_new/' + dataset + '_copulagan.csv.gz', index=False)

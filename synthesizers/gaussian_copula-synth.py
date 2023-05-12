@@ -33,7 +33,7 @@ for dataset in datasets:
     model = GaussianCopulaSynthesizer(metadata)
     model.fit(data)
     samples = model.sample(50000)
-    samples.to_csv('../data_new/' + dataset + '_gaussian_copula.csv', index=False)
+    samples.to_csv('../data_new/' + dataset + '_gaussian_copula.csv.gz', index=False)
 
 end = time.time()
 elapsed = end - start
