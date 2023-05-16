@@ -7,7 +7,7 @@ Additional visualizations of the empirical study can be found at https://public.
 
 ## 2023-05 Update
 
-Up-to-date benchmarks and evaluation were added to the `2023-05` sub-folder. You can launch the evaluation Jupyter Notebook directly [[on Google Colab here](https://colab.research.google.com/github/mostly-ai/paper-fidelity-accuracy/blob/dev/2023-05/evaluate.ipynb)].
+Up-to-date benchmarks and evaluation were added to the `2023-05` sub-folder. You can launch the evaluation Jupyter Notebook directly on Google Colab [here](https://colab.research.google.com/github/mostly-ai/paper-fidelity-accuracy/blob/main/2023-05/evaluate.ipynb).
 
 ## Acknowledgments
 
