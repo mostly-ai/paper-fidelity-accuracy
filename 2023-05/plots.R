@@ -68,12 +68,3 @@ ggplot(stats, aes(x=age, y=share, fill=split, color=split)) +
   coord_cartesian(xlim=c(15, 95), ylim=c(0, 0.45)) +
   guides(fill = FALSE, color = FALSE)
 ggsave('2023-05/adult_bench_bivariate.png', width=10, height=8)
-
-
-
-fid = fread('2023-05/fidelity.csv.gz')[, .(tvd=mean(tvd)), by = .(dataset, synthesizer)]
-fid_flip = fread('fidelity.csv.gz')[grepl('flip', synthesizer)][, .(tvd=mean(tvd)), by = .(dataset, synthesizer)]
-fid = rbind(fid, fid_flip)
-fid = merge(fid, fid[synthesizer=='HOLDOUT', .(dataset, tvd_holdout = tvd)])
-fid[, tvd_ratio := tvd / tvd_holdout]
-
