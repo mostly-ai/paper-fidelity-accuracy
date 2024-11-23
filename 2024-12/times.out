@@ -1,0 +1,16 @@
+                                                       TRAIN   GENERATE
+adult_synthcity-ctgan.csv.gz                        1230.661      0.199
+adult_synthcity-ddpm.csv.gz                          601.607    162.166
+adult_synthcity-bayesian_network.csv.gz               30.271      5.575
+adult_synthcity-arf.csv.gz                           628.912     79.960
+adult_synthcity-nflow.csv.gz                        1304.587     14.016
+
+credit-default_synthcity-ctgan.csv.gz               1980.687      0.234
+credit-default_synthcity-bayesian_network.csv.gz     103.000    153.261
+credit-default_synthcity-arf.csv.gz                  715.229    105.289
+
+bank-marketing_synthcity-bayesian_network.csv.gz      28.558      8.128
+bank-marketing_synthcity-arf.csv.gz                  339.489     95.741
+
+online-shoppers_synthcity-bayesian_network.csv.gz     14.740      9.689
+online-shoppers_synthcity-arf.csv.gz                 152.065     37.215
