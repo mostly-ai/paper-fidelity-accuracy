@@ -1,8 +1,9 @@
 from pathlib import Path
 import numpy as np
+import pandas as pd
 from mostlyai import qa
 
-path = Path('.')
+path = Path('data')
 
 rows = []
 for dataset in ['adult', 'bank-marketing', 'credit-default', 'online-shoppers']:
