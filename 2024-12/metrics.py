@@ -9,10 +9,10 @@ rows = []
 for dataset in ['adult', 'bank-marketing', 'credit-default', 'online-shoppers']:
     fns = list(path.glob(f'{dataset}*mostlyai*'))
     for fn in fns:
-        trn_tgt_df = pd.read_csv(path / f'{dataset}_trn.csv.gz').head(100)
-        hol_tgt_df = pd.read_csv(path / f'{dataset}_hol.csv.gz').head(100)
+        trn_tgt_df = pd.read_csv(path / f'{dataset}_trn.csv.gz')
+        hol_tgt_df = pd.read_csv(path / f'{dataset}_hol.csv.gz')
         html, metrics = qa.report(
-            syn_tgt_data = pd.read_csv(fn).head(100),
+            syn_tgt_data = pd.read_csv(fn),
             trn_tgt_data = trn_tgt_df,
             hol_tgt_data = hol_tgt_df,
         )
